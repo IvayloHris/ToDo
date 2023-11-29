@@ -17,7 +17,12 @@ test.only('ToDo_addNew', async ({ browser }) => {
         await newTodo.type(ToDos[i]);
         await page.keyboard.press('Enter');
         await expect(elements.nth(i)).toHaveText(ToDos[i]);
-        console.log(elements.nth(i).textContent());
+        const t = await page.evaluate(el => el.textContent, el)
+        console.log(t);
+
+
+        todoPage.add('bal')
+        todoPage.verifyText('bla')
         //await expect(page.getByText(ToDos[i])).toBeVisible();
     }
 
