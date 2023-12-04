@@ -11,7 +11,7 @@ reporter: 'html',
 use: {
 
   browserName : 'chromium',
-  headless : false
+  headless : true
 },
 
 };
