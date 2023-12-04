@@ -17,7 +17,7 @@ test.only('ToDo_addNew', async ({ browser }) => {
         await newTodo.type(ToDos[i]);
         await page.keyboard.press('Enter');
         await expect(elements.nth(i)).toHaveText(ToDos[i]);
-        const t = await page.evaluate(el => el.textContent, el)
+        const t = await page.textContent(".todo-list li div label");
         console.log(t);
 
 
