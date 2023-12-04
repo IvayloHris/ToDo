@@ -19,10 +19,6 @@ test.only('ToDo_addNew', async ({ browser }) => {
         await expect(elements.nth(i)).toHaveText(ToDos[i]);
         const t = await page.textContent(".todo-list li div label");
         console.log(t);
-
-
-        todoPage.add('bal')
-        todoPage.verifyText('bla')
         //await expect(page.getByText(ToDos[i])).toBeVisible();
     }
 
